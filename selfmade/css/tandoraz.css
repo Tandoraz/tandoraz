@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,400italic,300italic,500,500italic,700);
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    background: #333333;
+}
+
+.tandoraz {
+    color: #E91E63;
+    line-height: 1.5;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+button.tandoraz-button {
+  border-color: #E91E63;
+  color: #E91E63;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+button.tandoraz-button:hover {
+  background-color: #E91E63;
+  border-color: #E91E63;
+  color: #E9ECEF;
+}
+
+button.tandoraz-button:active {
+  background-color: #E91E63;
+  border-color: #E91E63;
+  color: #E9ECEF;
+}
+
+button.tandoraz-button:focus {
+  box-shadow: 0 0 0 1px rgba(233,30,99,.5);
+  color: #E9ECEF;
+}
+
+/* code for animated blinking cursor */
+.typed-cursor{
+    opacity: 1;
+    font-weight: 400;
+    font-size: 28px;
+    color: #E91E63;
+    margin-left: 5px;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
