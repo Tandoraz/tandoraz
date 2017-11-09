@@ -1,0 +1,22 @@
+{
+  "name": "tandoraz",
+  "version": "1.0.0",
+  "description": "Website for tandoraz.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tandoraz/Tandoraz.git"
+  },
+  "keywords": [
+    "tandoraz"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tandoraz/Tandoraz/issues"
+  },
+  "homepage": "tandoraz.com"
+}
