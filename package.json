@@ -4,7 +4,8 @@
   "description": "Website for tandoraz.com",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "stop": "taskkill /F /IM node.exe"
   },
   "repository": {
     "type": "git",
