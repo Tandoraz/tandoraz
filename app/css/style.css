@@ -5,11 +5,33 @@ html, body {
   padding: 0;
   heigth: 100%;
   width: 100%;
+  position: relative;
+}
+
+nav#nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+  background-color: #FEFEFE !important;
+}
+
+nav ul.nav li a {
+  transition: all 0.15s;
+  color: #343a40;
+}
+
+nav ul.nav li a.active {
+  background-color: #343a40 !important;
+  color: white;
+}
+
+a.connect-button {
+  border-radius: 50%;
 }
 
 section#header div.inner {
-  padding-top: 150px;
-  padding-bottom: 250px;
+  padding-top: 225px;
+  padding-bottom: 325px;
   background-color: #F7F7F9;
 }
 
@@ -32,7 +54,7 @@ section#header div.inner div.container h1 strong {
   border-radius: 0.3rem;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-top: -150px;
+  margin-top: -200px;
   margin-left: calc(50% - 285px);
 }
 .window .window-header {
@@ -86,15 +108,20 @@ section#header div.inner div.container h1 strong {
   line-height: 1.5em;
 }
 
-.code {
-  color: #999;
+code.code {
+  color: #777;
 }
 
-.code .number {
+code.code .number {
   color: #905;
 }
 
-.code .string {
+code.code .string {
   color: #690;
 }
 /*================= END Code Editor =================*/
+
+footer {
+  margin-top: 40px;
+  padding: 30px;
+}
