@@ -31,6 +31,34 @@ nav ul.nav li a.active {
   color: white;
 }
 
+nav ul.nav-burger {
+  display: none;
+}
+
+nav ul.nav-burger li {
+  cursor: pointer;
+  font-size: 17px;
+  padding: 0 1rem;
+}
+
+nav ul.nav-main {
+  transition: all ease .75s;
+}
+
+nav ul.nav-expanded {
+  display: block !important;
+}
+
+@media only screen and (max-width: 600px) {
+    nav ul.nav-pills {
+      display: none;
+    }
+
+    nav ul.nav-burger {
+      display: block;
+    }
+}
+
 a.connect-button {
   border-radius: 50%;
 }
@@ -63,6 +91,21 @@ section#header div.inner div.container h1 strong {
   margin-top: -200px;
   margin-left: calc(50% - 285px);
 }
+
+@media only screen and (max-width: 600px) {
+    div.window {
+        width: 400px;
+        margin-left: calc(50% - 200px);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    div.window {
+        width: 300px;
+        margin-left: calc(50% - 150px);
+    }
+}
+
 .window .window-header {
   height: 37px;
   background: #EAEAEA;

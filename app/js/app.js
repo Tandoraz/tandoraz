@@ -16,4 +16,8 @@ document.getElementById("age").innerHTML = age;
 
 $(document).ready(function() {
   $('body').scrollspy({ target: '#nav' , offset: 60});
+
+  $('ul.nav-burger li').click(function() {
+    $('ul.nav-main').toggleClass('nav-expanded');
+  });
 });
