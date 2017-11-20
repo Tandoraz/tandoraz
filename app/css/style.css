@@ -14,11 +14,20 @@ textarea:focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, .25) !important;
 }
 
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
 nav#nav {
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
   background-color: #FEFEFE !important;
+  z-index: 99;
 }
 
 nav ul.nav li a {
@@ -41,17 +50,32 @@ nav ul.nav-burger li {
   padding: 0 1rem;
 }
 
-nav ul.nav-main {
-  transition: all ease .75s;
-}
-
 nav ul.nav-expanded {
-  display: block !important;
+  height: 152px !important;
 }
 
 @media only screen and (max-width: 600px) {
-    nav ul.nav-pills {
-      display: none;
+    nav ul.nav-main {
+      display: block;
+      position: absolute;
+      overflow: hidden;
+      z-index: 98;
+      top: 60px;
+      left: 0;
+      padding: 0 1rem;
+      background-color: white;
+      width: 100%;
+      transition: height ease-in-out .75s;
+      height: 0;
+      box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.nav-main li:first-child {
+      margin-top: 1rem;
+    }
+
+    nav ul.nav-main li:last-child {
+      margin-bottom: 1rem;
     }
 
     nav ul.nav-burger {
@@ -82,6 +106,12 @@ section#header div.inner div.container h1 strong {
 }
 
 /*================= Code Editor =================*/
+
+@keyframes slideInFromBottom {
+    0%    {transform: translateY(120%);}
+    100%  {transform: translateY(0);}
+}
+
 .window {
   width: 570px;
   background: #FEFEFE;
@@ -90,6 +120,7 @@ section#header div.inner div.container h1 strong {
   overflow: hidden;
   margin-top: -200px;
   margin-left: calc(50% - 285px);
+  animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 
 @media only screen and (max-width: 600px) {
@@ -177,10 +208,20 @@ section#work {
   padding-top: 25px;
 }
 
+section#work .row {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 section#contact {
   min-height: 500px;
   background-color: #F7F7F9;
   padding-top: 25px;
+}
+
+section#contact form {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 section div.section-title {

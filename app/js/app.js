@@ -3,9 +3,21 @@ function navigateTo(section) {
 }
 
 function checkNavStyle() {
- if ($(window).width() > 600) {
-   // $('ul.nav-main').removeClass('nav-expanded');
+ if (window.innerWidth > 600) {
+   $('ul.nav-main').removeClass('nav-expanded');
  }
+}
+
+function sendMail(data) {
+  var formData = {};
+  data.forEach(function(input) {
+    formData[input.name] = input.value;
+  });
+  var link = "mailto:buergi.tobias@gmail.com"
+             + "&subject=" + escape(formData.name)
+             + "&body=" + escape(formData.message);
+  window.location.href = link;
+  document.getElementById("mailForm").reset();
 }
 
 var birthday = {
@@ -22,7 +34,17 @@ document.getElementById("age").innerHTML = age;
 
 $(document).ready(function() {
   $('body').scrollspy({ target: '#nav' , offset: 60});
+
+  $('nav li a').click( function(e) {
+    e.preventDefault();
+  });
+
   $('ul.nav-burger li').click(function() {
     $('ul.nav-main').toggleClass('nav-expanded');
+  });
+
+  $( "form#mailForm" ).submit(function( event ) {
+    sendMail($(this).serializeArray());
+    event.preventDefault();
   });
 });
