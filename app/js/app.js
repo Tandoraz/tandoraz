@@ -2,6 +2,12 @@ function navigateTo(section) {
   $('html, body').animate({scrollTop: $('#' + section).offset().top - 60 }, 'slow');
 }
 
+function checkNavStyle() {
+ if ($(window).width() > 600) {
+   // $('ul.nav-main').removeClass('nav-expanded');
+ }
+}
+
 var birthday = {
   day: 08,
   month: 04,
@@ -16,7 +22,6 @@ document.getElementById("age").innerHTML = age;
 
 $(document).ready(function() {
   $('body').scrollspy({ target: '#nav' , offset: 60});
-
   $('ul.nav-burger li').click(function() {
     $('ul.nav-main').toggleClass('nav-expanded');
   });
