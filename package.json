@@ -4,8 +4,9 @@
   "description": "Website for tandoraz.com",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "stop": "taskkill /F /IM node.exe"
+    "start": "webpack --config webpack.config.js",
+    "start-server": "node server.js",
+    "stop-server": "taskkill /F /IM node.exe"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,12 @@
   "homepage": "tandoraz.com",
   "dependencies": {
     "bootstrap": "4.0.0-beta.2",
-    "express": "4.16.2",
     "font-awesome": "4.7.0",
     "jquery": "1.9.1",
     "popper.js": "1.12.3"
+  },
+  "devDependencies": {
+    "express": "4.16.2",
+    "webpack": "3.8.1"
   }
 }
