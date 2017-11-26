@@ -1,5 +1,7 @@
-path = require('path');
-webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './app/js/app.js',
@@ -25,6 +27,13 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default']
+    }),
+    new CopyWebpackPlugin([
+      { from: 'app/assets/favicon.ivo', to: 'favicon.ivo' }
+    ]),
+    new HtmlWebpackPlugin({
+      inject : 'body',
+      template: 'app/index.html'
     })
   ]
 };

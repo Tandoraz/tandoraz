@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --config webpack.config.js",
-    "build": "webpack --config webpack.config.js && cp app/index.html dist/index.html",
+    "build": "webpack --config webpack.config.js",
     "start-server": "node server.js",
     "stop-server": "taskkill /F /IM node.exe"
   },
@@ -29,8 +29,10 @@
     "popper.js": "1.12.3"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "4.2.3",
     "css-loader": "0.28.7",
     "express": "4.16.2",
+    "html-webpack-plugin": "2.30.1",
     "node-sass": "4.7.2",
     "sass-loader": "6.0.6",
     "style-loader": "0.19.0",
