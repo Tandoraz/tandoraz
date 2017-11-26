@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 function navigateTo(section) {
   $('html, body').animate({scrollTop: $('#' + section).offset().top - 60 }, 'slow');
 }
