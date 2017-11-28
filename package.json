@@ -7,8 +7,7 @@
     "start": "webpack-dev-server --open",
     "build": "webpack",
     "watch": "webpack --progress --watch",
-    "start-server": "node server.js",
-    "stop-server": "taskkill /F /IM node.exe"
+    "start-server": "node server.js"
   },
   "repository": {
     "type": "git",
