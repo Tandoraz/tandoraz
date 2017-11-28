@@ -1,153 +1,145 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Tandoraz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="./css/style.css" />
-	</head>
-	<body data-spy="scroll" data-target="#nav" onresize="checkNavStyle()">
+<head>
+	<title>Tandoraz</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body data-spy="scroll" data-target="#nav" onresize="checkNavStyle()">
 
-		<nav id="nav" class="navbar fixed-top navbar-light bg-light">
+	<nav id="nav" class="navbar fixed-top navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">tandoraz.com</a>
+			<ul class="nav nav-main nav-pills justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link active" href="#header" onclick="navigateTo('header')">About Me</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#work" onclick="navigateTo('work')">My Work</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact" onclick="navigateTo('contact')">Contact</a>
+				</li>
+			</ul>
+			<ul class="nav nav-burger justify-content-end">
+				<li>
+					<i class="fa fa-bars"></i>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<section id="header">
+		<div class="inner">
 			<div class="container">
-				<a class="navbar-brand" href="#">tandoraz.com</a>
-				<ul class="nav nav-main nav-pills justify-content-end">
-					<li class="nav-item">
-						<a class="nav-link active" href="#header" onclick="navigateTo('header')">About Me</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#work" onclick="navigateTo('work')">My Work</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#contact" onclick="navigateTo('contact')">Contact</a>
-					</li>
-				</ul>
-				<ul class="nav nav-burger justify-content-end">
-					<li>
-						<i class="fa fa-bars"></i>
-					</li>
-				</ul>
+				<h1>Hi, I'm <strong>Tobias</strong> and I'm a Webdeveloper</h1>
+				<p class="sr-only">I live in Switzerland and </p>
+				<p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
+				lobortis feugiat sapien sed etiam volutpat accumsan.</p>
+				<a class="btn btn-outline-dark connect-button" role="button" href="https://github.com/Tandoraz"><i class="fa fa-github"></i></a>
+				<a class="btn btn-outline-dark connect-button" role="button" href="https://codepen.io/Tandoraz"><i class="fa fa-codepen"></i></a>
+				<a class="btn btn-outline-dark connect-button" role="button" href="https://www.instagram.com/tandoraz"><i class="fa fa-instagram"></i></a>
 			</div>
-		</nav>
+		</div>
 
-		<section id="header">
-			<div class="inner">
-				<div class="container">
-					<h1>Hi, I'm <strong>Tobias</strong> and I'm a Webdeveloper</h1>
-					<p class="sr-only">I live in Switzerland and </p>
-					<p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
-					lobortis feugiat sapien sed etiam volutpat accumsan.</p>
-					<a class="btn btn-outline-dark connect-button" role="button" href="https://github.com/Tandoraz"><i class="fa fa-github"></i></a>
-					<a class="btn btn-outline-dark connect-button" role="button" href="https://codepen.io/Tandoraz"><i class="fa fa-codepen"></i></a>
-					<a class="btn btn-outline-dark connect-button" role="button" href="https://www.instagram.com/tandoraz"><i class="fa fa-instagram"></i></a>
-				</div>
+		<div class="window">
+			<div class="window-header">
+				<div class="action-buttons"></div>
 			</div>
-
-			<div class="window">
-				<div class="window-header">
-					<div class="action-buttons"></div>
+			<div class="window-body">
+				<div class="line-numbers">
+					1<br>
+					2<br>
+					3<br>
+					4<br>
+					5<br>
+					6<br>
+					7<br>
+					8<br>
+					9<br>
+					10<br>
+					11<br>
+					12<br>
+					13<br>
+					14
 				</div>
-				<div class="window-body">
-					<div class="line-numbers">
-						1<br>
-						2<br>
-						3<br>
-						4<br>
-						5<br>
-						6<br>
-						7<br>
-						8<br>
-						9<br>
-						10<br>
-						11<br>
-						12<br>
-						13<br>
-						14
+				<code class="code">
+					{<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;name: <span class="string">"Tobias Bürgi"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;age: <span class="number" id="age"> </span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;gender: <span class="string">"Male"</span>,<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;nationality: <span class="string">"Swiss"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;job: <span class="string">"Application Engineer"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;company: <span class="string">"SBB CFF FFS"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;hobbies: {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Football"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Programming"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Gaming"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Netflix"</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+        	}
+				</code>
+			</div>
+		</div>
+	</section>
+
+	<section id="work">
+		<div class="section-title">
+			<h1 align="center">My Work</h1>
+		</div>
+
+		<div class="container">
+			<div class="row justify-content-md-center">
+
+				<div class="col-md-4">
+					<div class="card border-light text-center">
+						<div class="card-body">
+							<i class="fa fa-code icon" aria-hidden="true"></i>
+					    <h4 class="card-title">Coming soon...</h4>
+					    <p class="card-text">Here I am gonna list all of my Projectsi did.</p>
+							<a href="#">More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					  </div>
 					</div>
-					<code class="code">
-						{<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;name: <span class="string">"Tobias Bürgi"</span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;age: <span class="number" id="age"> </span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;gender: <span class="string">"Male"</span>,<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;nationality: <span class="string">"Swiss"</span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;job: <span class="string">"Application Engineer"</span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;company: <span class="string">"SBB CFF FFS"</span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;hobbies: {<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Football"</span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Programming"</span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Gaming"</span>,<br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Netflix"</span><br>
-	            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
-          	}
-					</code>
 				</div>
+
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section id="work">
-			<div class="section-title">
-				<h1 align="center">My Work</h1>
-			</div>
+	<section id="contact">
+		<div class="section-title">
+			<h1 align="center">Get in Touch</h1>
+		</div>
 
-			<div class="container">
-				<div class="row justify-content-md-center">
-
-					<div class="col-md-4">
-						<div class="card border-light text-center">
-							<div class="card-body">
-								<i class="fa fa-code icon" aria-hidden="true"></i>
-						    <h4 class="card-title">Coming soon...</h4>
-						    <p class="card-text">Here I am gonna list all of my Projectsi did.</p>
-								<a href="#">More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-						  </div>
-						</div>
+		<div class="container">
+			<form id="mailForm">
+			  <div class="form-group row">
+					<div class="form-group col-md-5 offset-md-1">
+  					<input type="text" class="form-control" name="name" placeholder="Name">
 					</div>
+					<div class="form-group col-md-5">
+						<input type="email" class="form-control" name="email" placeholder="Email">
+					</div>
+			    <div class="form-group col-md-10 offset-md-1">
+					   <textarea class="form-control" name="message" rows="10" placeholder="Message"></textarea>
+			    </div>
+					<div class="form-group col-md-10 offset-md-1">
+						<button type="submit" class="btn btn-outline-dark btn-lg btn-block">Send Message</button>
+					</div>
+			  </div>
+			</form>
+		</div>
+	</section>
 
-				</div>
-			</div>
-		</section>
+	<footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>&copy; Tobias Bürgi 2017</p>
+    </div>
+	</footer>
 
-		<section id="contact">
-			<div class="section-title">
-				<h1 align="center">Get in Touch</h1>
-			</div>
-
-			<div class="container">
-				<form id="mailForm">
-				  <div class="form-group row">
-						<div class="form-group col-md-5 offset-md-1">
-    					<input type="text" class="form-control" name="name" placeholder="Name">
-						</div>
-						<div class="form-group col-md-5">
-							<input type="email" class="form-control" name="email" placeholder="Email">
-						</div>
-				    <div class="form-group col-md-10 offset-md-1">
-						   <textarea class="form-control" name="message" rows="10" placeholder="Message"></textarea>
-				    </div>
-						<div class="form-group col-md-10 offset-md-1">
-							<button type="submit" class="btn btn-outline-dark btn-lg btn-block">Send Message</button>
-						</div>
-				  </div>
-				</form>
-			</div>
-		</section>
-
-		<footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>&copy; Tobias Bürgi 2017</p>
-      </div>
-		</footer>
-
-		<script src="./jquery/jquery.min.js"></script>
-		<script src="./popper.js/dist/umd/popper.min.js"></script>
-    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="./js/app.js"></script>
-		<script src="./bundle.js"></script>
-	</body>
+</body>
 </html>

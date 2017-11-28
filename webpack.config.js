@@ -2,12 +2,18 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './app/js/app.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  // devtool: 'inline-source-map',   // For source-maps
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    port: 3000
   },
   module: {
     rules: [{
@@ -22,17 +28,19 @@ module.exports = {
     }]
   },
   plugins: [
+    //new CleanWebpackPlugin([
+    //   'dist'
+    //]),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default']
     }),
     new CopyWebpackPlugin([
-      { from: 'app/assets/favicon.ivo', to: 'favicon.ivo' }
+      { from: 'app/assets/favicon.ico', to: 'favicon.ivo' }
     ]),
     new HtmlWebpackPlugin({
-      inject : 'body',
+      inject: 'body',
       template: 'app/index.html'
     })
   ]
