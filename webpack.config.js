@@ -18,6 +18,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      },{
         test: /\.scss$/,
         use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]
       },{
@@ -47,7 +53,7 @@ module.exports = {
       { from: 'app/assets/favicon.ico', to: 'favicon.ivo' }
     ]),
     new HtmlWebpackPlugin({
-      inject: 'body',
+      inject: 'head',
       template: 'app/index.html'
     })
   ]

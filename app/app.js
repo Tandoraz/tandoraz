@@ -39,10 +39,10 @@ function calcAge() {
   document.getElementById("age").innerHTML = age;
 }
 
-calcAge();
 window.addEventListener("resize", checkNavStyle);
 
 $(document).ready(function() {
+  calcAge();
   $('body').scrollspy({ target: '#nav' , offset: 60});
 
   $('nav li a').click( function(e) {
@@ -51,6 +51,15 @@ $(document).ready(function() {
 
   $('ul.nav-burger li').click(function() {
     $('ul.nav-main').toggleClass('nav-expanded');
+  });
+
+  $('a#backToTop').click(function(e) {
+    navigateTo('header');
+    e.preventDefault();
+  });
+
+  $('li.nav-item a').click(function() {
+    navigateTo($(this).attr('section-target'))
   });
 
   $( "form#mailForm" ).submit(function( event ) {
