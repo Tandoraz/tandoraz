@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './app/js/app.js',
+  entry: './app/app.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -16,16 +16,23 @@ module.exports = {
     port: 3000
   },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [{
-        loader: "style-loader"
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]
+      },{
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }, {
-        loader: "css-loader"
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff'
       }, {
-        loader: "sass-loader"
-      }]
-    }]
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$$/, loader: 'file-loader'
+      }, {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader'
+      }, {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader'
+      }
+    ]
   },
   plugins: [
     //new CleanWebpackPlugin([
