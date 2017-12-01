@@ -19,6 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: [/node_modules/],
         loader: 'babel-loader',
         query: {
           presets: ['es2015']
@@ -41,16 +42,16 @@ module.exports = {
     ]
   },
   plugins: [
-    //new CleanWebpackPlugin([
-    //   'dist'
-    //]),
+    new CleanWebpackPlugin([
+       'dist'
+    ]),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       Popper: ['popper.js', 'default']
     }),
     new CopyWebpackPlugin([
-      { from: 'app/assets/favicon.ico', to: 'favicon.ivo' }
+      { from: 'app/assets/favicon.ico', to: 'favicon.ico' }
     ]),
     new HtmlWebpackPlugin({
       inject: 'head',
