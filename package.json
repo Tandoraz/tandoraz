@@ -14,9 +14,9 @@
     "url": "git+https://github.com/Tandoraz/Tandoraz.git"
   },
   "keywords": [
-    "tandoraz"
+    "tandoraz.com"
   ],
-  "author": "",
+  "author": "Tobias Bürgi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tandoraz/Tandoraz/issues"
