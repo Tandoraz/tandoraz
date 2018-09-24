@@ -8,7 +8,7 @@ module.exports = {
   entry: './app/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './../dist')
   },
   // devtool: 'inline-source-map',   // For source-maps
   devServer: {
@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin([
-       'dist'
+       './../dist'
     ]),
     new webpack.ProvidePlugin({
       $: 'jquery',
