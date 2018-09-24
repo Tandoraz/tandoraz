@@ -23,10 +23,10 @@
   },
   "homepage": "tandoraz.com",
   "dependencies": {
-    "bootstrap": "4.0.0-beta.2",
+    "bootstrap": "4.1.3",
     "font-awesome": "4.7.0",
     "jquery": "3.0.0",
-    "popper.js": "1.12.3"
+    "popper.js": "1.14.3"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -42,6 +42,7 @@
     "node-sass": "4.7.2",
     "sass-loader": "6.0.6",
     "style-loader": "0.19.0",
+    "uglifyjs-webpack-plugin": "1.1.4",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
     "webpack-dev-server": "2.9.5"
