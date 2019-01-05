@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
-    "watch": "webpack --progress --watch",
-    "start-server": "node server.js"
+    "watch": "webpack --progress --watch"
   },
   "repository": {
     "type": "git",
