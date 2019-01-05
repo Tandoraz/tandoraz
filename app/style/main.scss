@@ -162,17 +162,8 @@ section#header div.inner div.container h1 strong {
 
 .window .window-body .line-numbers {
   background-color: #F0F2F1;
-  color: #98989E;
-  padding-right: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   width: 35px;
   height: 100%;
-  text-align: right;
-  border: none;
-  font-family: 'PT Mono', monospace;
-  font-size: 0.8rem;
-  line-height: 1.5em;
 }
 
 .window .window-body .code {
@@ -191,15 +182,28 @@ section#header div.inner div.container h1 strong {
 
 code.code {
   color: #777;
+  counter-reset: row;
+  .line {
+    display: block;
+    &::before {
+      counter-increment: row;
+      content:counter(row);
+      font-family: 'PT Mono', monospace;
+      font-size: 0.8rem;
+      line-height: 1.5em;
+      color: #98989E;
+      margin-left: -38px;
+      padding-right: 38px;
+    }
+  }
+  .number {
+    color: #905;
+  }
+  .string {
+    color: #690;
+  }
 }
 
-code.code .number {
-  color: #905;
-}
-
-code.code .string {
-  color: #690;
-}
 /*================= END Code Editor =================*/
 
 section#work {

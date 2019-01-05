@@ -4,6 +4,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const config = require('./webpack.config.js');
 
 module.exports = merge(config, {
+  mode: 'production',
   plugins: [
     new UglifyJSPlugin(),
     new webpack.DefinePlugin({
