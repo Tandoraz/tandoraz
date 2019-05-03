@@ -33,7 +33,7 @@ function calcAge() {
   }
   var now = new Date();
   var age = now.getFullYear() - birthday.year;
-  if (now.getMonth() < birthday.month || (now.getMonth() == birthday.month && now.getDate() < birthday.day)) {
+  if (now.getMonth() < birthday.month || (now.getMonth() + 1 == birthday.month && now.getDate() < birthday.day)) {
     age--;
   }
   document.getElementById("age").innerHTML = age;
