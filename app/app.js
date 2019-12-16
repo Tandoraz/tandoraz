@@ -18,10 +18,9 @@ function sendMail(data) {
   data.forEach(function(input) {
     formData[input.name] = input.value;
   });
-  var link = "mailto:buergi.tobias@gmail.com"
-             + "&subject=" + escape(formData.name)
-             + "&body=" + escape(formData.message);
-  window.location.href = link;
+  window.location.href = "mailto:buergi.tobias@gmail.com"
+      + "&subject=" + escape(formData.name)
+      + "&body=" + escape(formData.message);
   document.getElementById("mailForm").reset();
 }
 
@@ -30,10 +29,10 @@ function calcAge() {
     day: 8,
     month: 4,
     year: 1998
-  }
+  };
   var now = new Date();
   var age = now.getFullYear() - birthday.year;
-  if (now.getMonth() < birthday.month || (now.getMonth() + 1 == birthday.month && now.getDate() < birthday.day)) {
+  if (now.getMonth() < birthday.month || (now.getMonth() + 1 === birthday.month && now.getDate() < birthday.day)) {
     age--;
   }
   document.getElementById("age").innerHTML = age;
